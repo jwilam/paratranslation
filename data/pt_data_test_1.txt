@@ -1,0 +1,41 @@
+        // Chapter data structure
+        const chapters = [
+            { id: "rabbitwaiting", name: "守株待兔", book: "韓非子", chapter: "五蠹", author: "韓非", era: "先秦" }, 
+            { id: "memorial", name: "出師表", book: "三國志", chapter: "出師表", author: "諸葛亮", era: "魏晉" },
+         ];
+
+        // C2MPT Data
+        const sentencesByChapter = {
+		
+		    "rabbitwaiting": [
+                {
+                    "id": "hanfeizi-rabbitwaiting-001",
+                    "classical": ["守", "株", "待", "兔"],
+                    "modern": ["守着", "樹樁", "等待", "兔子"],
+                    "alignments": [[0, 0, ""], [1, 1, ""], [2, 2, ""], [3, 3, ""]]
+                }
+            ],
+  
+
+            "memorial": [
+                {
+                    "id": "memorial-003",
+                    "classical": ["此", "悉", "貞", "亮", "死", "節", "之", "臣"],
+                    "modern": ["這些", "全都", "正直", "、", "可信", "、", "為", "節操", "死", "的", "大臣"],
+                    "alignments": [
+                        [0, 0, ""],
+                        [1, 1, ""],
+                        [2, 2, ""],
+                        ["2,3", 3, "+"],
+                        [3, 4, ""],
+                        ["3,4", 5, "+"],
+                        [4, 6, "x", { frame: 1 }],
+                        [5, 7, "", { frame: 1 }],
+                        [4, 8, "x", { frame: 1 }],
+                        [6, 9, ""],
+                        [7, 10, ""]
+                    ],
+                    "comment": "對譯策略 5：重構句例——活用：為用（死 -> 為...死）"
+                }
+			],
+       };
